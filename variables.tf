@@ -21,23 +21,3 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
-
-variable "country_id" {
-  type      = string
-  default     = ""
-}
-
-variable "city_id" {
-  type      = string
-  default     = ""
-}
-
-variable "isp_id" {
-  type      = string
-  default     = ""
-}
-
-variable "building_id" {
-  type = string
-  default     = ""
-}
