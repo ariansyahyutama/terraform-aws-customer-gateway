@@ -2,6 +2,7 @@ locals {
   country   = var.country
   city      = var.city
   isp       = var.isp
+  building  = var.building
 }
 
 resource "aws_customer_gateway" "this" {
@@ -13,7 +14,7 @@ resource "aws_customer_gateway" "this" {
 
   tags = merge(
     {
-      Name = format("%s-%s-%s", var.country, each.city, var.isp)
+      Name = format("%s-%s-%s-%s", var.country, each.city, var.building, var.isp)
     },
     var.tags
   )

@@ -33,3 +33,7 @@ variable "city" {
 variable "isp" {
   type      = string
 }
+
+variable "building" {
+  type = string
+}
