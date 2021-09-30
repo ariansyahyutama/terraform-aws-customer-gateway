@@ -24,16 +24,20 @@ variable "tags" {
 
 variable "country" {
   type      = string
+  default     = ""
 }
 
 variable "city" {
   type      = string
+  default     = ""
 }
 
 variable "isp" {
   type      = string
+  default     = ""
 }
 
 variable "building" {
   type = string
+  default     = ""
 }
