@@ -14,7 +14,7 @@ resource "aws_customer_gateway" "this" {
 
   tags = merge(
     {
-      Name = format("%s-%s-%s-%s", var.country, each.city, var.building, var.isp)
+      Name = format("%s-%s-%s-%s", var.country, var.city, var.building, var.isp)
     },
     var.tags
   )
