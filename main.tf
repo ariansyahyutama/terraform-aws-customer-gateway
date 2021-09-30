@@ -10,7 +10,12 @@
           "managedBy" = "terraform"
       }
   )*/
-
+ locals {
+   country = var.country_id
+   city = var.city_id
+   isp = var.isp_id
+   building = var.building_id
+ }
 
 resource "aws_customer_gateway" "this" {
   for_each = var.create ? var.customer_gateways : {}
@@ -27,7 +32,7 @@ resource "aws_customer_gateway" "this" {
 
   tags = merge(
     {
-      Name = format("%s-%s-%s-%s", country, city, building, isp)
+      Name = format("%s-%s-%s-%s", local.country, local.city, local.building, local.isp)
     },
     var.tags
   )
