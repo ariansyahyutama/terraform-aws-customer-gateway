@@ -21,3 +21,15 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "country" {
+  type      = string
+}
+
+variable "city" {
+  type      = string
+}
+
+variable "isp" {
+  type      = string
+}
