@@ -22,22 +22,22 @@ variable "tags" {
   default     = {}
 }
 
-variable "country" {
+variable "country_id" {
   type      = string
   default     = ""
 }
 
-variable "city" {
+variable "city_id" {
   type      = string
   default     = ""
 }
 
-variable "isp" {
+variable "isp_id" {
   type      = string
   default     = ""
 }
 
-variable "building" {
+variable "building_id" {
   type = string
   default     = ""
 }
