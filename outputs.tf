@@ -13,3 +13,8 @@ output "ip_add" {
   description = "List of IDs of Customer Gateway"
   value       = [for k, v in aws_customer_gateway.this : v.ip_address]
 }
+
+output "tagss" {
+  description = "List of IDs of Customer Gateway"
+  value       = [for k, v in aws_customer_gateway.this : v.tags]
+}
