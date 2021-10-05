@@ -7,3 +7,9 @@ output "customer_gateway" {
   description = "Map of Customer Gateway attributes"
   value       = aws_customer_gateway.this
 }
+
+
+output "ip_add" {
+  description = "List of IDs of Customer Gateway"
+  value       = [for k, v in aws_customer_gateway.this : v.ip_address]
+}
