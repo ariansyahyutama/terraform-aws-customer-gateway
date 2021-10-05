@@ -16,5 +16,5 @@ output "ip_add" {
 
 output "tagss" {
   description = "List of IDs of Customer Gateway"
-  value       = [for k, v in aws_customer_gateway.this : key]
+  value       = [for k, v in aws_customer_gateway.this : k.key]
 }
