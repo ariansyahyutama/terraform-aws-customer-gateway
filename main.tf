@@ -25,12 +25,4 @@ output "gateway_details" {
   }
 }
 
-# You should also keep your existing outputs if needed, or update them
-output "ids" {
-  value = [for cgw in aws_customer_gateway.this : cgw.id]
-}
-
-output "ip_add" {
-  value = [for cgw in aws_customer_gateway.this : cgw.ip_address]
-}
 
